@@ -1,1 +1,0 @@
-import{j as t}from"./app-PnxvuRUn.js";import{C as n}from"./ContentRenderer-DNUGuzYV.js";const r=({privacy:e})=>t.jsx("section",{className:"mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 min-h-screen mt-48",children:t.jsx(n,{content:e.content})});export{r as default};

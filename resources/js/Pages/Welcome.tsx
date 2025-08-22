@@ -23,7 +23,7 @@ export default function Welcome({
             <Sliders slides={slides} />
 
             <Exhibition products={products}/>
-            <NewsLetter />
+            {/* <NewsLetter /> */}
         </>
     );
 }

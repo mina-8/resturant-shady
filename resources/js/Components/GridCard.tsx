@@ -194,7 +194,7 @@ return (
                             <p
                                 className='font-semibold text-lg text-primary-color'
                             >
-                                {filterOptionPrice?.price} SAR
+                                {filterOptionPrice?.price} {t('home.pound')}
                             </p>
                             <div
                                 className='flex'
@@ -222,7 +222,7 @@ return (
                                         value={option.id}
 
                                     >
-                                        {option.title} - ({option.price} SAR)
+                                        {option.title} - ({option.price} {t('home.pound')})
                                     </option>
                                 )}
                             </select>

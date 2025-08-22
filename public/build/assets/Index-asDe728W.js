@@ -1,0 +1,1 @@
+import{j as t}from"./app-DTgARD4X.js";import{C as n}from"./ContentRenderer-3mgZs86S.js";const r=({delivery:e})=>t.jsx("section",{className:"mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 min-h-screen mt-48",children:t.jsx(n,{content:e.content})});export{r as default};

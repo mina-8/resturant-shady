@@ -19,7 +19,7 @@ class RegisterGuestController extends Controller
         $validated =  $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255',
-            'phone' => ['required', 'string', 'regex:/^5\d{8}$/'],
+            'phone' => ['required', 'string', 'regex:/^01[0125][0-9]{8}$/'],
             'area' => 'required|string|max:255',
             'street' => 'required|string|max:255',
             'block' => 'required|string|max:255',

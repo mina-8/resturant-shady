@@ -2,7 +2,7 @@
 import { Head, router, usePage } from '@inertiajs/react'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import banner from '@/../../public/aboutus/image (1).jfif'
+import banner from '@/../../public/aboutus/menu-bg.jpg'
 import { countries } from '@/Components/AllCountry/countries'
 import { PageProps } from '@/types'
 import { FaExclamationCircle, FaFax, FaHome, FaPhoneAlt } from 'react-icons/fa'

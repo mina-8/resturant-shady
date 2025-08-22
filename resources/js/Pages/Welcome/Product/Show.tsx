@@ -275,7 +275,7 @@ const Show = ({ product }: props) => {
                         <div
                             className='font-medium text-4xl my-4 pb-4 border-b-2'
                         >
-                            {filterOptionPrice?.price} SAR
+                            {filterOptionPrice?.price} {t('home.pound')}
                         </div>
 
                         {/* code and available */}
@@ -337,7 +337,7 @@ const Show = ({ product }: props) => {
                                             value={option.id}
 
                                         >
-                                            {option.title} - ({option.price} SAR)
+                                            {option.title} - ({option.price} {t('home.pound')})
                                         </option>
                                     )}
                                 </select>

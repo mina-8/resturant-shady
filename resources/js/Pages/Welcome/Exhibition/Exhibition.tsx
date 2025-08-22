@@ -198,7 +198,7 @@ const Exhibition = ({ products }: props) => {
 
     return (
         <section
-            className='w-full max-w-6xl mx-auto relative'
+            className='w-full max-w-6xl mx-auto relative min-h-screen'
         >
 
             {contextHolder}
@@ -265,7 +265,7 @@ const Exhibition = ({ products }: props) => {
                                         <p
                                             className='font-semibold text-lg text-primary-color'
                                         >
-                                            {filterOptionPrice?.price} SAR
+                                            {filterOptionPrice?.price} {t('home.pound')}
                                         </p>
                                         <div
                                             className='flex'
@@ -293,7 +293,7 @@ const Exhibition = ({ products }: props) => {
                                                     value={option.id}
 
                                                 >
-                                                    {option.title} - ({option.price} SAR)
+                                                    {option.title} - ({option.price} {t('home.pound')})
                                                 </option>
                                             )}
                                         </select>

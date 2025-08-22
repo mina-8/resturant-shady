@@ -1,5 +1,5 @@
 import { ImgHTMLAttributes } from 'react';
-import logo from '@/../../public/logo.svg';
+import logo from '@/../../public/logo.png';
 
 interface ApplicationLogoProps extends ImgHTMLAttributes<HTMLImageElement> {
 
@@ -14,7 +14,7 @@ export default function ApplicationLogo({
   return (
     <img
       src={logo}
-      alt="ORCA"
+      alt="resturant"
       className={`bg-cover bg-center rounded-lg  ${className}`}
       {...props}
     />

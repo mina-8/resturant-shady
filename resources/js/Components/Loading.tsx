@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "@/../../public/logo.svg";
+import logo from "@/../../public/logo.png";
 import { motion } from "framer-motion";
 
 interface LoadingProps {

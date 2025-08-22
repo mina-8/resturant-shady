@@ -72,7 +72,7 @@ const CartNav = ({ user }: { user: User }) => {
               <div>
                 <div className="font-semibold">{item.title}</div>
                 <div className="flex items-center gap-1 text-sm">
-                  <span>{item.price} SAR</span>
+                  <span>{item.price} {t('home.pound')}</span>
                   <IoClose />
                   <span>{item.quantity}</span>
                 </div>
@@ -93,11 +93,11 @@ const CartNav = ({ user }: { user: User }) => {
         <tbody>
           <tr>
             <td className="border p-1">{t('navbarlist.cartnav.sub_total')}</td>
-            <td className="border p-1">{totalPrice.toFixed(2)} SAR</td>
+            <td className="border p-1">{totalPrice.toFixed(2)} {t('home.pound')}</td>
           </tr>
           <tr>
             <td className="border p-1 font-bold">{t('navbarlist.cartnav.total')}</td>
-            <td className="border p-1 font-bold">{totalPrice.toFixed(2)} SAR</td>
+            <td className="border p-1 font-bold">{totalPrice.toFixed(2)} {t('home.pound')}</td>
           </tr>
         </tbody>
       </table>

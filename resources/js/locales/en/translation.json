@@ -19,7 +19,8 @@
         "regitser_page": "Register",
         "login_page": "Login",
         "wish_list": "Wish list",
-        "delivery": "Free delivery on all orders"
+        "delivery": "Free delivery on all orders",
+        "pound" : "Pound"
     },
     "exhibition": {
         "special_promtion": "Special Offers",

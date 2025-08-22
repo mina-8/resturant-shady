@@ -17,7 +17,8 @@
         "regitser_page" : "سجل",
         "login_page" : "تسجيل دخول",
         "wish_list" : "قوائم الامنيات",
-        "delivery" : "توصيل مجاني على كل الطلبات"
+        "delivery" : "توصيل مجاني على كل الطلبات",
+        "pound" : "جنية"
     },
     "exhibition" :{
         "special_promtion" : "عروض خاصة",

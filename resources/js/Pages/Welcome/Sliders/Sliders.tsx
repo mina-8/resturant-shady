@@ -62,7 +62,7 @@ export default function Sliders({ slides }: Props) {
         <div className='flex justify-center items-center flex-col '>
 
             <div className='w-full'>
-                {slides?.length > 0 ?
+                {slides?.length > 0 && (
                     <ConfigProvider
                         theme={{
                             components: {
@@ -151,90 +151,7 @@ export default function Sliders({ slides }: Props) {
                             )}
                         </Carousel>
                     </ConfigProvider>
-                    :
-
-                    <ConfigProvider
-                        theme={{
-                            components: {
-                                Carousel: {
-                                    dotHeight: 20,
-                                    dotWidth: 20,
-                                    dotActiveWidth: 20,
-
-                                },
-                            },
-                        }}
-                    >
-                        <Carousel
-                            arrows
-                            infinite
-                            autoplay
-                            beforeChange={HandelActiveIndex}
-                            prevArrow={<CustomArrow direction="prev" />}
-                            nextArrow={<CustomArrow direction="next" />}
-                        >
-
-                            {images.map((item, index) =>
-                                <div key={index} className='relative'>
-                                    <div
-                                        style={{
-                                            height: '550px',
-                                            backgroundImage: `url('${item}')`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center',
-                                        }}
-                                        className='relative'
-                                    >
-                                        {/* <div className='absolute w-full h-full bg-black top-0 right-0 opacity-50'></div> */}
-                                        <div className={`flex flex-col ${i18n.language === 'ar' ? 'items-end' : 'items-start'} px-24 justify-center gap-2 h-full overflow-hidden`}>
-                                            <p
-                                                className={`pt-20 text-6xl text-black drop-shadow-3xl xs:text-xl
-                                                ${AcitveIndex === index ? i18n.language == 'ar' ? 'animate-faderight' : 'animate-fadeleft' : ''}`}>
-                                                {/* {t(`slides.title_${index + 1}`)} */}
-                                            </p>
-
-                                            <p className={`py-5 text-3xl  font-bold text-black drop-shadow-3xl xs:text-base xs:text-center
-                                             ${AcitveIndex === index ? i18n.language == 'ar' ? 'animate-faderight' : 'animate-fadeleft' : ''}`}
-                                                style={{
-                                                    animationDuration: "1s",
-                                                    animationDelay: "0.75s"
-                                                }}
-                                            >
-                                                {/* {t(`slides.description_${index + 1}`)} */}
-                                                </p>
-
-                                            {
-                                                AcitveIndex === index &&
-
-                                                <div className='flex justify-between items-center gap-4 mt-12 xs:flex-col'>
-                                                    <Link
-                                                        href={route(`welcome`, { lang: i18n.language })}
-                                                        className={`${AcitveIndex === index ? i18n.language == 'ar' ? 'animate-faderight' : 'animate-fadeleft' : ''} bg-primary-color text-white p-4 rounded-lg`}
-                                                        style={{
-                                                            animationDuration: "1s",
-                                                            animationDelay: "1.5s"
-                                                        }}
-                                                    >
-                                                        <div className={`flex items-center justify-center ${i18n.language === 'ar' ? 'flex-row' : 'flex-row-reverse'} w-full relative z-10`}>
-                                                            <div className={`flex items-center w-10 h-10 ${i18n.language === 'ar' ? '' : 'justify-end'}`}>
-                                                                {i18n.language === 'ar' ? <FaArrowLeft /> : <FaArrowRight />}
-
-                                                            </div>
-                                                            <div className='ml-2 text-xl'>{t(`slides.button_${index + 1}`)}</div>
-                                                        </div>
-                                                    </Link>
-
-                                                </div>
-
-                                            }
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                        </Carousel>
-                    </ConfigProvider>
+    )
                 }
             </div>
 

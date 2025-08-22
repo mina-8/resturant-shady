@@ -13,7 +13,7 @@ import { FaArrowUp, FaHeart, FaRegUser, FaTruck, FaUserPlus, FaWhatsapp } from '
 import { IoLockClosed, IoMoon, IoSearch } from 'react-icons/io5';
 import SearchForm from '@/Components/SearchWeb/SearchForm';
 import Footer from './Footer';
-import logonav from '@/../../public/logo_nav.svg'
+
 
 import { MdOutlineWbSunny } from 'react-icons/md';
 import ChangeLang from '@/Components/ChangeLang/ChangeLang';
@@ -78,7 +78,7 @@ export default function AuthWelcome({
         <LangWraper>
             <div className="min-h-screen " dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
                 <nav
-                    className={` fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isnavbar ? 'bg-black bg-opacity-50' : 'bg-transparent'} `}
+                    className={`${isnavbar ? 'fixed' : ''}  top-0 left-0 w-full z-50 transition-colors duration-300 ${isnavbar ? 'bg-black bg-opacity-50' : 'bg-transparent'} `}
                 >
                     {!isnavbar && (
 
@@ -122,14 +122,6 @@ export default function AuthWelcome({
 
                                         <CategoryNav />
 
-                                        <a
-                                            className='uppercase inline-flex items-center font-bold hover:text-primary-color'
-                                            target='_blank'
-                                            href={site_setting?.shop_link || '#'}
-                                        >
-                                            <img src={logonav} alt="logo" className='h-24 bg-cover bg-center' />
-                                            {t('navbar-links.shop')}
-                                        </a>
 
                                     </div>
                                     <div className="relative ms-3 flex items-center gap-4">
@@ -446,19 +438,6 @@ export default function AuthWelcome({
                             </ResponsiveNavLink>
 
                             <CategoryNav />
-
-                            <a
-                                className='uppercase inline-flex items-center font-bold hover:text-primary-color'
-                                target='_blank'
-                                href={site_setting?.shop_link || '#'}
-                            >
-                                {/* <ApplicationLogo className='lg:h-20 h-10' /> */}
-                                <img src={logonav} alt="logo" className='lg:h-24 h-16 ' />
-                                {t('navbar-links.shop')}
-                            </a>
-
-
-
 
                             <span className="inline-flex rounded-md">
                                 <button

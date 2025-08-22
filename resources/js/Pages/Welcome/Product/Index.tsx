@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next';
 import { IoIosHeartEmpty } from 'react-icons/io';
 import { IoHomeSharp } from 'react-icons/io5';
 
-
 export interface ProductOption {
     id: number;
     title: string;
@@ -200,6 +199,7 @@ const Index = ({ product }: props) => {
             {contextHolder}
             <section
                 className='min-h-screen max-w-7xl mx-auto'
+
             >
                 <div
                     className='h-48'
@@ -295,7 +295,7 @@ const Index = ({ product }: props) => {
                             <div
                                 className='font-medium text-4xl my-4 pb-4 border-b-2'
                             >
-                                {filterOptionPrice?.price} SAR
+                                {filterOptionPrice?.price} {t('home.pound')}
                             </div>
 
                             {/* code and available */}
@@ -357,7 +357,7 @@ const Index = ({ product }: props) => {
                                                 value={option.id}
 
                                             >
-                                                {option.title} - ({option.price} SAR)
+                                                {option.title} - ({option.price} {t('home.pound')})
                                             </option>
                                         )}
                                     </select>
